@@ -15,3 +15,33 @@
 .title-form{
     padding-top: 40px;
 }
+
+.logo-design{
+    display: flex;
+    justify-content: center;
+}
+
+.child-number{
+    width: 50%;
+}
+
+.child-age{
+    width: 50%;
+}
+
+.fs{
+    font-size: large;
+}
+
+#reveal-if-cat, #reveal-if-dog, #reveal-if-no{
+    display: none;
+}
+#catradio:checked ~ #reveal-if-cat{
+    display: block;
+}
+#dogradio:checked ~ #reveal-if-dog{
+    display: block;
+}
+#noradio:checked ~ #reveal-if-no{
+    display: block;
+}

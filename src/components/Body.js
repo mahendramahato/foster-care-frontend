@@ -24,7 +24,7 @@ export const Body = () => {
 
     const getAnimalInterest = (e) => {
         const {value, checked} = e.target
-        console.log(`${value} is ${checked}`)
+        //console.log(`${value} is ${checked}`)
 
         if(checked){ // when user check box
             setAnimalInterest([...animal_interest, value])
@@ -42,7 +42,7 @@ export const Body = () => {
 
         ClientService.createClient(client).then((response) =>{
 
-            console.log(response.data)
+            // console.log(response.data)
             navigate('/application_submit_successful')
 
         }).catch(error =>{
@@ -108,7 +108,7 @@ export const Body = () => {
                     <div className="col-md-6">
                         <label htmlFor="inputCellPhone" className="form-label fw-bold fs">Cell Phone</label>
                         <input 
-                        type="number" 
+                        type="name" 
                         className="form-control" 
                         id="inputCellPhone"
                         name="cellPhone"
@@ -174,7 +174,7 @@ export const Body = () => {
                             id="petalter"
                             type="radio" 
                             name="alter"
-                            value="yes"
+                            value={"Yes"}
                             onChange={(e) => setPetAlter(e.target.value)}
                         /> Yes
                         </div>
@@ -184,7 +184,7 @@ export const Body = () => {
                             id="petalter"
                             type="radio" 
                             name="alter"
-                            value="no"
+                            value={"No"}
                             onChange={(e) => setPetAlter(e.target.value)}
                         /> No
                     </div>
@@ -198,7 +198,7 @@ export const Body = () => {
                             id="fosterprogram"
                             type="radio" 
                             name="program"
-                            value="weekend"
+                            value="Weekend Sleepovers (2-3 nights)"
                             onChange={(e) => setFosterProgram(e.target.value)}
                         /> Weekend Sleepovers (2-3 nights)
                         </div>
@@ -208,7 +208,7 @@ export const Body = () => {
                             id="fosterprogram"
                             type="radio" 
                             name="program"
-                            value="short-term"
+                            value="Short Term Foster (average of 1-3 weeks)"
                             onChange={(e) => setFosterProgram(e.target.value)}
                         /> Short Term Foster (average of 1-3 weeks)
                         </div>
@@ -217,7 +217,7 @@ export const Body = () => {
                             id="fosterprogram"
                             type="radio" 
                             name="program"
-                            value="family-foster"
+                            value="Family Foster (potentially 8-12 weeks)"
                             onChange={(e) => setFosterProgram(e.target.value)}
                         /> Family Foster (potentially 8-12 weeks)
                     </div>
@@ -237,7 +237,7 @@ export const Body = () => {
                                 <label className="form-label fw-bold">What type of cat are you interested in fostering or learning about? Please select all that apply</label>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" 
-                                    value="Bottle Kitties" name="animal_interest"
+                                    value="Bottle Kitties " name="animal_interest"
                                     onChange={(e)=> getAnimalInterest(e)}
                                     id="flexCheckDefault"/>
                                     <label className="form-check-label" htmlFor="flexCheckDefault">
@@ -358,7 +358,7 @@ export const Body = () => {
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" 
-                                    value="Pregnant/ Nursing Moms" name="animal_interest"
+                                    value="Pregnant/ Nursing Dog Moms" name="animal_interest"
                                     onChange={(e)=> getAnimalInterest(e)}
                                     id="flexCheckDefault1"/>
                                     <label className="form-check-label" htmlFor="flexCheckDefault1">
@@ -385,7 +385,7 @@ export const Body = () => {
                                 </div>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" 
-                                    value="Medical Cases" name="animal_interest"
+                                    value="Medical Cases Dogs" name="animal_interest"
                                     onChange={(e)=> getAnimalInterest(e)}
                                     id="flexCheckDefault1"/>
                                     <label className="form-check-label" htmlFor="flexCheckDefault1">
